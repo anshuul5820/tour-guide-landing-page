@@ -59,6 +59,7 @@ header {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   /* shifts element to -50% of its current width & height */
 }
 
@@ -67,6 +68,7 @@ header {
   text-transform: uppercase;
   backface-visibility: hidden;
   /* used to remove shakiness from animations, bcoz backside of animation moves a little in animation */
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -121,3 +123,78 @@ header {
 }
 /* moveInLeft- name of variable */
 /* browers are optimized to handle opacity & transform properties */
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all 0.2s;
+  /* animates all properties by default values */
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* 0 10px- shadow distance in x & y direction,  */
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+}
+/* :link CSS pseudo-class represents an element that has not yet been visited. It matches every unvisited <a> or <area> element that has an href attribute. */
+
+/* inline-block elements act as plain texts; can be centered via text-align*/
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  /* sets dimensions to height, width of parent element */
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+/* ::after creates a pseudo-element that is the last child of the selected element.  */
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  /* applies styles of 0% before animation starts */
+}
+
+/* transition property is set on initial state of element */
