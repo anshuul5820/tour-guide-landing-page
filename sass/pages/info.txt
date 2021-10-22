@@ -1,0 +1,3 @@
+holds styles related to a particular page 
+useful if some styles are very specific for a specific page
+Ex: homepage
