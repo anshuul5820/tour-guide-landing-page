@@ -1,213 +1,130 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
-*,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
-  /* font-size: 10px; */
-  /* 1rem: 10px; default: 16px */
-
-  font-size: 62.5%;
-  /* default fontsize=10px, 10/16=.625 */
-}
-/* root element: html */
+  font-size: 62.5%; }
 
 body {
-  /* everything related to font is specified in body     */
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-header {
+.header {
   height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 131, 0.8) /*0.8- opacity*/
-    ),
-    url('../img/hero.jpg');
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
-  /* cover always fits image inside viewport; */
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  position: relative;
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-  /* for absolute positions to work, immediate parent should have its position set to relative */
-}
-
-.header__logo {
-  height: 3.5rem;
-  /* width- autoset by browser */
-}
-
-.header__logo:hover {
-  animation: moveInLeft 1s ease-out;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  /* shifts element to -50% of its current width & height */
-}
+  position: relative; }
+  .header__logo {
+    height: 3.5rem; }
+    .header__logo-box {
+      position: absolute;
+      top: 4rem;
+      left: 4rem; }
+    .header__logo:hover {
+      animation: moveInLeft 1s ease-out; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  /* used to remove shakiness from animations, bcoz backside of animation moves a little in animation */
-  margin-bottom: 60px;
-}
+  margin-bottom: 60px; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 1s ease-out; }
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 700;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation-delay: 3s;  
-  animation-iteration-count: 3;
- */
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-  animation: moveInRight 1s ease-out;
-}
-
-/* creating animations- 
-2 ways: @keyframes, transition */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem) rotate(0deg);
-  }
+    transform: translateX(-10rem) rotate(0deg); }
   80% {
-    transform: translateX(1rem);
-  }
+    transform: translateX(1rem); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
-  }
+    transform: translateX(10rem); }
   80% {
-    transform: translateX(-2rem);
-  }
+    transform: translateX(-2rem); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-/* moveInLeft- name of variable */
-/* browers are optimized to handle opacity & transform properties */
+    transform: translateX(0); } }
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem);
-  }
+    transform: translateY(3rem); }
   100% {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
+    transform: translateY(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 100px;
   transition: all 0.2s;
-  /* animates all properties by default values */
   position: relative;
-  font-size: 1.6rem;
-}
+  font-size: 1.6rem; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /* 0 10px- shadow distance in x & y direction,  */
-}
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
   background-color: #fff;
   color: #777;
   text-decoration: none;
   padding: 1.5rem 4rem;
-  display: inline-block;
-}
-/* :link CSS pseudo-class represents an element that has not yet been visited. It matches every unvisited <a> or <area> element that has an href attribute. */
-
-/* inline-block elements act as plain texts; can be centered via text-align*/
+  display: inline-block; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: '';
   display: inline-block;
   height: 100%;
   width: 100%;
-  /* sets dimensions to height, width of parent element */
   border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s;
-}
-/* ::after creates a pseudo-element that is the last child of the selected element.  */
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  transition: all 0.4s; }
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-  /* applies styles of 0% before animation starts */
-}
-
-/* transition property is set on initial state of element */
+  animation-fill-mode: backwards; }
