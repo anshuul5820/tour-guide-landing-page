@@ -1,0 +1,2 @@
+styles of individual components are held together by layout of page.
+Ex: footer, header, etc
