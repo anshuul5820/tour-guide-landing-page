@@ -35,6 +35,18 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
   &::after {
     content: '';
     display: inline-block;
@@ -72,7 +84,7 @@
     transform: translateY(-2px);
   }
   &:active {
-    box-shadow: 0 .5rem 2rem rgba($color-black, 0.15);
+    box-shadow: 0 0.5rem 2rem rgba($color-black, 0.15);
     transform: translateY(0);
   }
 }
