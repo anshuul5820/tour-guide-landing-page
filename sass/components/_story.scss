@@ -59,6 +59,7 @@
     transform: translate(-50%, -50%);
   }
   //change styles of __caption when story class is hovered, so &:hover &__caption {
+  //prerequisite- 2nd selector needs to be child of first element
 
   &:hover &__img {
     transform: translateX(-4rem) scale(1);

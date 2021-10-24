@@ -13,8 +13,12 @@
 @import 'components/feature-box';
 @import 'components/story';
 @import 'components/bg-video';
+@import 'components/form';
 
 @import 'layout/header';
 @import 'layout/grid';
 
 @import 'pages/home';
+
+//:: - psuedo elements- items that are already on webpag
+//:  - psuedo selector- items that appear later on some event(hover, visited, etc)
