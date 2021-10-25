@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
@@ -15,6 +16,27 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natous</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+            </ul>
+        </nav>
+        <!-- nav will be actual navigation page -->
+    </div>
+
     <header class="header">
         <!-- .header-block -->
         <div class="header__logo-box"><img src="img/logo-white.png" alt="Logo" class="header__logo" /></div>
@@ -28,9 +50,380 @@
             <!-- h1- should contain main headingo of website, useful for SEO -->
             <a href="#" class="btn btn--white btn--animated">discover our tours</a>
         </div>
-
     </header>
 
+    <main>
+        <section class="section-about">
+            <div class="u-center-text u-margin-bottom-big">
+                <!-- u-center-text- utility class, performs a specific action(centers content here) -->
+                <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small">come fall in love with nature</h3>
+                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facilis numquam
+                        repellendus quis laboriosam rem, necessitatibus quibusdam, qui ab in id aliquam molestiae beatae
+                        dolor repellat tenetur, sint quia! Sint.</p>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like never before</h3>
+                    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio nostrum
+                        labore, ratione, doloremque temporibus dignissimos quos nobis.</p>
+
+                    <a href="#" class="btn-text">Learn more &rarr;</a>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="composition">
+                        <img src="img/nat-1-large.jpg" alt="Photo 1"
+                            class="composition__photo composition__photo--p1" />
+                        <img src="img/nat-2-large.jpg" alt="Photo 2"
+                            class="composition__photo composition__photo--p2" />
+                        <img src="img/nat-3-large.jpg" alt="Photo 3"
+                            class="composition__photo composition__photo--p3" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-features">
+            <div class="row">
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="icon-basic-world feature-box__icon"></i>
+                        <!-- i-italics -->
+                        <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
+                        <p class="feature-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="icon-basic-compass feature-box__icon"></i>
+                        <!-- i-italics -->
+                        <h3 class="heading-tertiary u-margin-bottom-small">Meet nature</h3>
+                        <p class="feature-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="icon-basic-map feature-box__icon"></i>
+                        <!-- i-italics -->
+                        <h3 class="heading-tertiary u-margin-bottom-small">Find your way</h3>
+                        <p class="feature-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="feature-box">
+                        <i class="icon-basic-heart feature-box__icon"></i>
+                        <!-- i-italics -->
+                        <h3 class="heading-tertiary u-margin-bottom-small">Live a healthier life</h3>
+                        <p class="feature-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-tours">
+            <div class="u-center-text u-margin-bottom-big">
+                <!-- u-center-text- utility class, performs a specific action(centers content here) -->
+                <h2 class="heading-secondary">Most popular tours</h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--1"></div>
+                            <!-- &nbsp;- empty space in html -->
+                            <h4 class="card__heading"><span class="card__heading-span card__heading-span--1">the sea
+                                    explorer</span></h4>
+                            <!-- span is used to use box-decoration-content CSS property -->
+                            <div class="card__details">
+                                <ul>
+                                    <li>3 day tours</li>
+                                    <li>upto 30 people</li>
+                                    <li>2 tour guides</li>
+                                    <li>sleep in cozy</li>
+                                    <li>Difficulty: medium</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-1">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                    <p class="card__price-only">Only</p>
+                                    <p class="card__price-value">$297</p>
+                                    <a href="#popup" class="btn btn--white">Book now</a>
+                                </div>
+                            </div>
+                            <!-- cta-call to action -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--2"></div>
+                            <!-- &nbsp;- empty space in html -->
+                            <h4 class="card__heading"><span class="card__heading-span card__heading-span--2">the hill
+                                    explorer</span></h4>
+                            <!-- span is used to use box-decoration-content CSS property -->
+                            <div class="card__details">
+                                <ul>
+                                    <li>3 day tours</li>
+                                    <li>upto 30 people</li>
+                                    <li>2 tour guides</li>
+                                    <li>sleep in cozy</li>
+                                    <li>Difficulty: easy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-2">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                    <p class="card__price-only">Only</p>
+                                    <p class="card__price-value">$654</p>
+                                    <a href="#popup" class="btn btn--white">Book now</a>
+                                </div>
+
+                            </div>
+                            <!-- cta-call to action -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--3"></div>
+                            <!-- &nbsp;- empty 
+                            space in html -->
+                            <h4 class="card__heading"><span class="card__heading-span card__heading-span--3">the
+                                    snow adventurer</span></h4>
+                            <!-- span is used to use box-decoration-content CSS property -->
+                            <div class="card__details">
+                                <ul>
+                                    <li>3 day tours</li>
+                                    <li>upto 30 people</li>
+                                    <li>2 tour guides</li>
+                                    <li>sleep in cozy</li>
+                                    <li>Difficulty:hard</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back card__side--back-3">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                    <p class="card__price-only">Only</p>
+                                    <p class="card__price-value">$297</p>
+                                    <a href="#popup" class="btn btn--white">Book now</a>
+                                </div>
+
+                            </div>
+                            <!-- cta-call to action -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="u-center-text u-margin-top-huge">
+                <a href="#" class="btn btn--green">Discover all tours</a>
+            </div>
+        </section>
+
+        <section class="section-stories">
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="img/video.mp4" type="video/mp4">
+                    <source src="img/video.webm" type="video/webm">
+                    Your browser is not supported!
+                </video>
+            </div>
+
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">We make people genuinely happy</h2>
+            </div>
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape"><img src="img/nat-8.jpg" alt="person on tour" class="story__img">
+                        <figcaption class="story__caption">Mary Smith</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Had a best week with my family</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sapiente iure dolores in animi
+                            incidunt dolor praesentium dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Cum sapiente iure dolores in animi incidunt dolor praesentium dicta.Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Cum sapiente iure dolores in animi incidunt dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape"><img src="img/nat-7.jpg" alt="person on tour" class="story__img">
+                        <figcaption class="story__caption">Heisenberg</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Had a best week with my family</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sapiente iure dolores in animi
+                            incidunt dolor praesentium dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Cum sapiente iure dolores in animi incidunt dolor praesentium dicta.Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Cum sapiente iure dolores in animi incidunt dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape"><img src="img/nat-9.jpg" alt="person on tour" class="story__img">
+                        <figcaption class="story__caption">Meoww Meoww</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Had a best week with my family</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sapiente iure dolores in animi
+                            incidunt dolor praesentium dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Cum sapiente iure dolores in animi incidunt dolor praesentium dicta.Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Cum sapiente iure dolores in animi incidunt dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-center-text u-margin-top-huge">
+                <a href="#" class="btn-text">Read all stories &rarr;</a>
+            </div>
+        </section>
+        <section class="section-book">
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <div class="u-margin-bottom-small">
+                            <h2 class="heading-secondary">Start booking now</h2>
+                        </div>
+                        <form action="#" class="form">
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                                <label for="name" class="form__label">Full name</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                                <label for="email" class="form__label">Email address</label>
+                            </div>
+                            <div class="form__group u-margin-bottom-medium">
+                                <div class="form__radio-group">
+                                    <input type="radio" id="small" class="form__radio-input" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>Small tour group
+                                    </label>
+                                    <!-- span is used bcoz radio buttons cant be styles in css, so create own buttons -->
+                                    <!-- trick: hide defualt radio input, when custom radio is selected, original one gets selected, coz label is connected -->
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" id="large" class="form__radio-input" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>Large tour group
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__group"><button class="btn btn--green">Next step &rarr;</button></div>
+                            <!-- button element is required inside form, a:link wont work. -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__logo-box"><img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo"></div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">Built by <a href="#" class="footer__link">Ansul Sah</a>.Copyright
+                        &copy; Ansul Sah</p>
+                </div>
+            </div>
+        </footer>
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                        booking</h3>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris
+                        sit
+                        amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim
+                        enim
+                        sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit
+                        eget
+                        gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque
+                        laoreet.
+                        Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis.
+                        Faucibus
+                        vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet
+                        massa
+                        vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet
+                        sed
+                        euismod nisi porta.
+                    </p>
+                    <a href="#" class="btn btn--green">Book now</a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- for testing css fluid grids, not related to natours
+    <section class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">Col 1 of 2</div>
+            <div class="col-1-of-2">Col 1 of 2</div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">Col 1 of 3</div>
+            <div class="col-1-of-3">Col 1 of 3</div>
+            <div class="col-1-of-3">Col 1 of 3</div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">Col 1 of 3</div>
+            <div class="col-2-of-3">Col 2 of 3</div>
+            <!-- 2 of 3-> 2 parts of 3 part grid -->
+<!-- <div class="col-1-of-3">Col 1 of 3</div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">Col 1 of 4</div>
+            <div class="col-1-of-4">Col 1 of 4</div>
+            <div class="col-1-of-4">Col 1 of 4</div>
+            <div class="col-1-of-4">Col 1 of 4</div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">Col 1 of 4</div>
+            <div class="col-1-of-4">Col 1 of 4</div>
+            <div class="col-2-of-4">Col 2 of 4</div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">Col 1 of 4</div>
+            <div class="col-3-of-4">Col 3 of 4</div>
+        </div>
+    </section> -->

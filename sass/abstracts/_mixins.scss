@@ -1,0 +1,17 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+    //'both' clears float:left and right
+  }
+}
+// clearfix adds a psuedo element :after main element which clears the float
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
