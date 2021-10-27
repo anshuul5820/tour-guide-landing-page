@@ -18,7 +18,9 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 
-  @media (min-resolution: 192dpi) and (min-width: 37.5px), (min-width: 125px) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5px),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 37.5em),
+    only screen and (min-width: 125px) {
     // 192dots per inch: apple display's resolution
     background-image: linear-gradient(
         to right bottom,
