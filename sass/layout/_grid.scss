@@ -1,13 +1,23 @@
 .row {
   //   width: 1140px; standard
   max-width: $grid-width;
+  //if vw<grid-width, use 100% of vw
   margin: 0 auto;
   //centres block elements
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
   //selects everything except last child
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
 
   @include clearfix;
 
@@ -15,6 +25,12 @@
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontol;
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
+      margin-right: 0;
+      margin-bottom: $gutter-vertical-small;
     }
   }
   // attribute selector--> select all class that begin with col-
