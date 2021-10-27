@@ -38,8 +38,18 @@
     transform: translateX(-3rem) skewX(12deg);
     //transform is best way to change positions of float elements, shouldnt use margin, padding
     position: relative;
+    border-radius: 50%;
+
+    overflow: hidden;
     @include respond(phone) {
       transform: translateX(-3rem) skew(0);
+    }
+
+    @supports (clip-path: circle(50% at 50% 50%)) or
+      (-webkit-clip-path: circle(50% at 50% 50%)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      border-radius: none;
     }
   }
 
